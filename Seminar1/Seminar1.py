@@ -27,14 +27,30 @@
 # Напишите программу, 
 # которая на вход принимает 5 чисел и находит максимальное из них.
 
-print("Input five numbers")
-number = list(map(int, input().split()))
+# print("Input five numbers")
+# number = list(map(int, input().split()))
 
-max_number =  number[0]
-for i in number:
-    if i > max_number:
-        max_number = i
-print(max_number)
+# max_number =  number[0]
+# for i in number:
+#     if i > max_number:
+#         max_number = i
+# print(max_number)
+
+# Задача №3 
+# Напишите программу, 
+# которая будет на вход принимать число N и выводить числа от -N до N.
+
+# первый вариант решения
+
+# print("Input numbers")
+# number = int(input())
+# print(*range(-number, number+1))
+
+# второй вариант решения
+
+# n = int(input('Введите число: '))
+# for i in range(-n, n + 1):
+#     print(i, end = ' ')
 
 
 
