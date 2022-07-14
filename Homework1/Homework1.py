@@ -74,10 +74,10 @@
 # которая принимает на вход координаты двух точек 
 # и находит расстояние между ними в 2D пространстве.
 
-from math import sqrt
-Ax, Ay = map(float, input('Введите координаты точки А:').split())
-Bx, By = map(float, input('Введите координаты точки B:').split())
-print('Расстояние между точками: ',round(sqrt((Ax - Bx)**2 + (Ay - By)**2), 3))
+# from math import sqrt
+# Ax, Ay = map(float, input('Введите координаты точки А:').split())
+# Bx, By = map(float, input('Введите координаты точки B:').split())
+# print('Расстояние между точками: ',round(sqrt((Ax - Bx)**2 + (Ay - By)**2), 3))
 
 
 
