@@ -27,29 +27,46 @@
 # причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, 
 # в которой находится эта точка (или на какой оси она находится).
 
-print("Введите координату точки X:")
-x = float(input())
-print("Введите координату точки Y:")
-y = float(input())
+# print("Введите координату точки X:")
+# x = float(input())
+# print("Введите координату точки Y:")
+# y = float(input())
 
-if x > 0 and y > 0:
-    value = 1
-    print(f"Точка находится в {value} четверти")
-elif x < 0 and y > 0:
-    value = 2
-    print(f"Точка находится в {value} четверти")
-elif x < 0 and y < 0:
-    value = 3
-    print(f"Точка находится в {value} четверти")
-elif x > 0 and y <0:
-    value = 4
-    print(f"Точка находится в {value} четверти")
-elif x == 0 and (y > 0 or y < 0):
-    print(f"Точка находится на оси X")
-elif y == 0 and (x > 0 or x < 0):
-    print(f"Точка находится на оси Y")
-elif x == 0 and y == 0:
-    print("Одна из координат должна быть больше 0!!!")
+# if x > 0 and y > 0:
+#     value = 1
+#     print(f"Точка находится в {value} четверти")
+# elif x < 0 and y > 0:
+#     value = 2
+#     print(f"Точка находится в {value} четверти")
+# elif x < 0 and y < 0:
+#     value = 3
+#     print(f"Точка находится в {value} четверти")
+# elif x > 0 and y <0:
+#     value = 4
+#     print(f"Точка находится в {value} четверти")
+# elif x == 0 and (y > 0 or y < 0):
+#     print(f"Точка находится на оси X")
+# elif y == 0 and (x > 0 or x < 0):
+#     print(f"Точка находится на оси Y")
+# elif x == 0 and y == 0:
+#     print("Одна из координат должна быть больше 0!!!")
+
+
+# Задача №4
+# Напишите программу, которая по заданному номеру четверти, 
+# показывает диапазон возможных координат точек в этой четверти (x и y).
+
+quarter_number = int(input("Введите номер четверти: "))
+if 5 <= quarter_number or quarter_number <= 0:
+    print("Введите номер четверти от 1 до 4")
+if quarter_number == 1:
+    print("Дипазон значений точки: x > 0 , y > 0")
+elif quarter_number == 2:
+    print("Дипазон значений точки: x < 0 , y > 0")
+elif quarter_number == 3:
+    print("Дипазон значений точки: x < 0 , y < 0")
+elif quarter_number == 4:
+    print("Дипазон значений точки: x > 0 , y < 0")
 
 
 
