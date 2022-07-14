@@ -56,18 +56,28 @@
 # Напишите программу, которая по заданному номеру четверти, 
 # показывает диапазон возможных координат точек в этой четверти (x и y).
 
-quarter_number = int(input("Введите номер четверти: "))
-if 5 <= quarter_number or quarter_number <= 0:
-    print("Введите номер четверти от 1 до 4")
-if quarter_number == 1:
-    print("Дипазон значений точки: x > 0 , y > 0")
-elif quarter_number == 2:
-    print("Дипазон значений точки: x < 0 , y > 0")
-elif quarter_number == 3:
-    print("Дипазон значений точки: x < 0 , y < 0")
-elif quarter_number == 4:
-    print("Дипазон значений точки: x > 0 , y < 0")
+# quarter_number = int(input("Введите номер четверти: "))
+# if 5 <= quarter_number or quarter_number <= 0:
+#     print("Введите номер четверти от 1 до 4")
+# if quarter_number == 1:
+#     print("Дипазон значений точки: x > 0 , y > 0")
+# elif quarter_number == 2:
+#     print("Дипазон значений точки: x < 0 , y > 0")
+# elif quarter_number == 3:
+#     print("Дипазон значений точки: x < 0 , y < 0")
+# elif quarter_number == 4:
+#     print("Дипазон значений точки: x > 0 , y < 0")
 
+
+# Задача №5
+# Напишите программу, 
+# которая принимает на вход координаты двух точек 
+# и находит расстояние между ними в 2D пространстве.
+
+from math import sqrt
+Ax, Ay = map(float, input('Введите координаты точки А:').split())
+Bx, By = map(float, input('Введите координаты точки B:').split())
+print('Расстояние между точками: ',round(sqrt((Ax - Bx)**2 + (Ay - By)**2), 3))
 
 
 
