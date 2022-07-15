@@ -60,14 +60,14 @@
 # Ежегодно он увеличивается на P процентов, после чего дробная часть копеек отбрасывается.
 # Требуется определить: через сколько лет вклад составит не менее Y рублей.
 
-X = float(input('Input sum: '))
-P = float(input('Input percent: '))
-Y = float(input('Input expected amount: ')) 
-year = 0
-while Y > X:
-    X = int((X * P )/100 + X)
-    year=year+1
-print(year)
+# X = float(input('Input sum: '))
+# P = float(input('Input percent: '))
+# Y = float(input('Input expected amount: ')) 
+# year = 0
+# while Y > X:
+#     X = int((X * P )/100 + X)
+#     year=year+1
+# print(year)
 
 
 
