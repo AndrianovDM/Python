@@ -36,23 +36,40 @@
 # Требуется определить значение второго по величине элемента в этой последовательности, 
 # то есть элемента, который будет наибольшим, если из последовательности удалить наибольший элемент.
 
-number = (list(tuple(input().split(' '))))
-list = []
-for i in number: 
-    list.append(float(i))
-max_number_one =  list[len(list)-1]
+# number = (list(tuple(input().split(' '))))
+# list = []
+# for i in number: 
+#     list.append(float(i))
+# max_number_one =  list[len(list)-1]
 
-for i in list:
-    if i > max_number_one:
-        max_number_one = i
-list.pop(list.index(max_number_one))
+# for i in list:
+#     if i > max_number_one:
+#         max_number_one = i
+# list.pop(list.index(max_number_one))
 
-max_number_second =  list[len(list)-1]
+# max_number_second =  list[len(list)-1]
 
-for j in list:
-    if j > max_number_second:
-        max_number_second = j
-print("Second max number: ", max_number_second)
+# for j in list:
+#     if j > max_number_second:
+#         max_number_second = j
+# print("Second max number: ", max_number_second)
+
+
+# Задача №4 
+# Вклад в банке составляет X рублей. 
+# Ежегодно он увеличивается на P процентов, после чего дробная часть копеек отбрасывается.
+# Требуется определить: через сколько лет вклад составит не менее Y рублей.
+
+X = float(input('Input sum: '))
+P = float(input('Input percent: '))
+Y = float(input('Input expected amount: ')) 
+year = 0
+while Y > X:
+    X = int((X * P )/100 + X)
+    year=year+1
+print(year)
+
+
 
 
 
