@@ -26,20 +26,61 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-def productOfPairs(array):
-    new_array = []
-    for i in range(len(array)//2):
-        new_num = array[i] * array[-i-1]
-        new_array.append(new_num)
-    if len(array)%2 != 0:
-        new_num = array[len(array)//2]**2
-        new_array.append(new_num)
-    return new_array
+# def productOfPairs(array):
+#     new_array = []
+#     for i in range(len(array)//2):
+#         new_num = array[i] * array[-i-1]
+#         new_array.append(new_num)
+#     if len(array)%2 != 0:
+#         new_num = array[len(array)//2]**2
+#         new_array.append(new_num)
+#     return new_array
 
-number = (list(tuple(input('Input array: ').split(' '))))
+# number = (list(tuple(input('Input array: ').split(' '))))
+# list = []
+# for i in number: 
+#     list.append(float(i))
+
+
+# print(f'{list}'+'->'+ f'{productOfPairs(list)}')
+
+# Задача №3
+# Задайте список из вещественных чисел. 
+# Напишите программу, которая найдёт разницу между 
+# максимальным и минимальным значением дробной части элементов.
+# Пример:
+# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+def maxMinNumber(array, maxmin):
+
+    if maxmin == 'max':
+        max_number = array[0]%1
+        for i in range(len(array)):
+            if array[i]%1 > max_number:
+                max_number = array[i]%1
+        return max_number
+    
+    if maxmin == 'min':
+        min_number = array[0]%1
+        for i in range(len(array)):
+            if array[i]%1 < min_number:
+                min_number = array[i]%1
+
+        return min_number
+
+arr = (list(tuple(input('Input array: ').split(' '))))
 list = []
-for i in number: 
+for i in arr: 
     list.append(float(i))
 
+max_num = round(maxMinNumber(list, 'max'),2)
+min_num = round(maxMinNumber(list, 'min'),2)
 
-print(f'{list}'+'->'+ f'{productOfPairs(list)}')
+print(f'{list}'+' -> '+ 'max: ' f'{max_num}' + ' min: ' f'{min_num}' )
+print('number difference: ' + f'{max_num - min_num}')
+
+
+
+
+        
+
