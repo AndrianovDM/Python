@@ -51,34 +51,54 @@
 # Пример:
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-def maxMinNumber(array, maxmin):
+# def maxMinNumber(array, maxmin):
 
-    if maxmin == 'max':
-        max_number = array[0]%1
-        for i in range(len(array)):
-            if array[i]%1 > max_number:
-                max_number = array[i]%1
-        return max_number
+#     if maxmin == 'max':
+#         max_number = array[0]%1
+#         for i in range(len(array)):
+#             if array[i]%1 > max_number:
+#                 max_number = array[i]%1
+#         return max_number
     
-    if maxmin == 'min':
-        min_number = array[0]%1
-        for i in range(len(array)):
-            if array[i]%1 < min_number:
-                min_number = array[i]%1
+#     if maxmin == 'min':
+#         min_number = array[0]%1
+#         for i in range(len(array)):
+#             if array[i]%1 < min_number:
+#                 min_number = array[i]%1
 
-        return min_number
+#         return min_number
 
-arr = (list(tuple(input('Input array: ').split(' '))))
-list = []
-for i in arr: 
-    list.append(float(i))
+# arr = (list(tuple(input('Input array: ').split(' '))))
+# list = []
+# for i in arr: 
+#     list.append(float(i))
 
-max_num = round(maxMinNumber(list, 'max'),2)
-min_num = round(maxMinNumber(list, 'min'),2)
+# max_num = round(maxMinNumber(list, 'max'),2)
+# min_num = round(maxMinNumber(list, 'min'),2)
 
-print(f'{list}'+' -> '+ 'max: ' f'{max_num}' + ' min: ' f'{min_num}' )
-print('number difference: ' + f'{max_num - min_num}')
+# print(f'{list}'+' -> '+ 'max: ' f'{max_num}' + ' min: ' f'{min_num}' )
+# print('number difference: ' + f'{max_num - min_num}')
 
+
+# Задача №4
+# Напишите программу, 
+# которая будет преобразовывать десятичное число в двоичное.
+# Пример:
+# 45 -> 101101
+# 3 -> 11
+# 2 -> 10
+
+number = int(input('Input number: '))
+def ConvertNumber(number):
+    bin_num = ''
+    while number > 0:
+        bin_num = str(number % 2) + bin_num
+        number = number // 2
+    return bin_num
+
+bin_number = ConvertNumber(number)
+
+print(f'{number}' + ' convert -> ' + f'{bin_number}')
 
 
 
