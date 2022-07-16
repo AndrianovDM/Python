@@ -36,7 +36,7 @@
 # print(Searchlist(list1, 12))
 
 
-# Задача №2
+# Задача №3
 # Напишите программу, которая определит позицию 
 # второго вхождения строки в списке либо сообщит, что её нет.
 
@@ -48,14 +48,14 @@
 # - список: [], ищем: "123", ответ: -1
 
 
-def SearchElem(arr, element):
-    count = 0
-    for i in range(len(arr)):
-        if arr[i] == element:
-            count += 1
-        if count == 2:
-            return f'yes: {i + 1}'
-    return 'no'
+# def SearchElem(arr, element):
+#     count = 0
+#     for i in range(len(arr)):
+#         if arr[i] == element:
+#             count += 1
+#         if count == 2:
+#             return f'yes: {i + 1}'
+#     return 'no'
 
-print(SearchElem(["123", "234", 123, "567"], '123'))
+# print(SearchElem(["123", "234", 123, "567"], '123'))
 
