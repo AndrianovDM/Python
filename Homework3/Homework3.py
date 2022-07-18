@@ -41,7 +41,6 @@
 # for i in number: 
 #     list.append(float(i))
 
-
 # print(f'{list}'+'->'+ f'{productOfPairs(list)}')
 
 # Задача №3
@@ -88,17 +87,49 @@
 # 3 -> 11
 # 2 -> 10
 
-number = int(input('Input number: '))
-def ConvertNumber(number):
-    bin_num = ''
-    while number > 0:
-        bin_num = str(number % 2) + bin_num
-        number = number // 2
-    return bin_num
+# number = int(input('Input number: '))
+# def ConvertNumber(number):
+#     bin_num = ''
+#     while number > 0:
+#         bin_num = str(number % 2) + bin_num
+#         number = number // 2
+#     return bin_num
 
-bin_number = ConvertNumber(number)
+# bin_number = ConvertNumber(number)
 
-print(f'{number}' + ' convert -> ' + f'{bin_number}')
+# print(f'{number}' + ' convert -> ' + f'{bin_number}')
+
+
+# Задача №5
+# *Задайте число. 
+# Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+# *Пример:*
+# - для k = 8 список будет выглядеть так:
+# [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
+
+def negaFibonachi(num):
+    arr_right = [ 0, 1 ]
+    arr_left = [ 0, 1 ]
+
+    for i in range(num-1):
+        new_num_right = arr_right[i] + arr_right[i + 1]
+        arr_right.append(new_num_right)
+        new_num_left = arr_left[i] - arr_left[i+1]
+        arr_left.append(new_num_left)
+    arr_left.pop (0)
+    arr_right.pop (1)
+    arr_right.reverse()
+    arr = arr_right + arr_left
+    arr.reverse()
+    return arr
+
+print(negaFibonachi(8))
+
+       
+
+    
+
+
 
 
 
