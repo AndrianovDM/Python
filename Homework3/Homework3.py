@@ -107,23 +107,23 @@
 # - для k = 8 список будет выглядеть так:
 # [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 
-def negaFibonachi(num):
-    arr_right = [ 0, 1 ]
-    arr_left = [ 0, 1 ]
+# def negaFibonachi(num):
+#     arr_right = [ 0, 1 ]
+#     arr_left = [ 0, 1 ]
 
-    for i in range(num-1):
-        new_num_right = arr_right[i] + arr_right[i + 1]
-        arr_right.append(new_num_right)
-        new_num_left = arr_left[i] - arr_left[i+1]
-        arr_left.append(new_num_left)
-    arr_left.pop (0)
-    arr_right.pop (1)
-    arr_right.reverse()
-    arr = arr_right + arr_left
-    arr.reverse()
-    return arr
+#     for i in range(num-1):
+#         new_num_right = arr_right[i] + arr_right[i + 1]
+#         arr_right.append(new_num_right)
+#         new_num_left = arr_left[i] - arr_left[i+1]
+#         arr_left.append(new_num_left)
+#     arr_left.pop (0)
+#     arr_right.pop (1)
+#     arr_right.reverse()
+#     arr = arr_right + arr_left
+#     arr.reverse()
+#     return arr
 
-print(negaFibonachi(8))
+# print(negaFibonachi(8))
 
        
 
