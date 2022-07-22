@@ -18,20 +18,46 @@
 # Задайте натуральное число N. 
 # Напишите программу, которая составит список простых делителей числа N. (1 - составное число)
 
-num = int(input("Input integer number: "))
-list_1 = list(range(2,num+1))
-new_list_one = []
-for i in list_1:
-    if num % i == 0:
-        new_list_one.append(i)
+# num = int(input("Input integer number: "))
+# list_1 = list(range(2,num+1))
+# new_list_one = []
+# for i in list_1:
+#     if num % i == 0:
+#         new_list_one.append(i)
 
-new_list_two = []
-# print(new_list_one)
-for i in new_list_one:
-    for j in range(2, i ):
-        if i % j == 0:
-            new_list_two.append(i)
+# new_list_two = []
+# # print(new_list_one)
+# for i in new_list_one:
+#     for j in range(2, i ):
+#         if i % j == 0:
+#             new_list_two.append(i)
+#             break
+
+# print(" List of prime divisors of " + f'{num}:' + f' {(list(set(new_list_one) - set(new_list_two)))}')
+
+
+# Задача №3
+# Задана натуральная степень k. 
+# Сформировать случайным образом список коэффициентов (значения от 0 до 100) 
+# многочлена и вывести на экран.
+# Пример:
+# - k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x² = 0
+
+from random import randint
+
+k = int(input("Input integer number: "))
+list = [randint(0, 100) for i in range(k+1)]
+
+def polynomial(k , array ):
+    equation =''
+    for i in range(k):
+        polyn = f'{array[i]}*'+ f'x^{k-i} + '
+        equation = equation + polyn
+        if i == k-2:
             break
+    equation = 'Example: ' + equation + f'{array[k-1]}*x' + f' + {array[k]}' + ' = 0'
+    return equation
 
-print(" List of prime divisors of " + f'{num}:' + f' {(list(set(new_list_one) - set(new_list_two)))}')
+print(polynomial(k, list))        
+
 
