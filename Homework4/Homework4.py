@@ -37,27 +37,44 @@
 
 
 # Задача №3
+# Задайте последовательность чисел. 
+# Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
+
+number = (list(tuple(input('Input array: ').split(' '))))
+list = []
+for i in number: 
+    list.append(float(i))
+print(f"Old array: {list}")
+
+new_list = []
+for i in list:
+    if i not in new_list:
+        new_list.append(i)
+print(f"New array: {new_list}")
+
+
+# Задача №4
 # Задана натуральная степень k. 
 # Сформировать случайным образом список коэффициентов (значения от 0 до 100) 
 # многочлена и вывести на экран.
 # Пример:
 # - k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x² = 0
 
-from random import randint
+# from random import randint
 
-k = int(input("Input integer number: "))
-list = [randint(0, 100) for i in range(k+1)]
+# k = int(input("Input integer number: "))
+# list = [randint(0, 100) for i in range(k+1)]
 
-def polynomial(k , array ):
-    equation =''
-    for i in range(k):
-        polyn = f'{array[i]}*'+ f'x^{k-i} + '
-        equation = equation + polyn
-        if i == k-2:
-            break
-    equation = 'Example: ' + equation + f'{array[k-1]}*x' + f' + {array[k]}' + ' = 0'
-    return equation
+# def polynomial(k , array ):
+#     equation =''
+#     for i in range(k):
+#         polyn = f'{array[i]}*'+ f'x^{k-i} + '
+#         equation = equation + polyn
+#         if i == k-2:
+#             break
+#     equation = 'Example: ' + equation + f'{array[k-1]}*x' + f' + {array[k]}' + ' = 0'
+#     return equation
 
-print(polynomial(k, list))        
+# print(polynomial(k, list))        
 
 
