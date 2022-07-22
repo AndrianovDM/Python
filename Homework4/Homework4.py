@@ -3,7 +3,6 @@
 # Пример:
 # - при d = 3, π = 3.141
 
-
 # num = int(input("Enter the number of decimal places for pi: "))
 # i= 0
 # number_pi = 0
@@ -40,17 +39,17 @@
 # Задайте последовательность чисел. 
 # Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
 
-number = (list(tuple(input('Input array: ').split(' '))))
-list = []
-for i in number: 
-    list.append(float(i))
-print(f"Old array: {list}")
+# number = (list(tuple(input('Input array: ').split(' '))))
+# list = []
+# for i in number: 
+#     list.append(float(i))
+# print(f"Old array: {list}")
 
-new_list = []
-for i in list:
-    if i not in new_list:
-        new_list.append(i)
-print(f"New array: {new_list}")
+# new_list = []
+# for i in list:
+#     if i not in new_list:
+#         new_list.append(i)
+# print(f"New array: {new_list}")
 
 
 # Задача №4
