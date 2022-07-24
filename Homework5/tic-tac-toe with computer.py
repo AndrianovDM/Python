@@ -1,6 +1,7 @@
 # Задача №2
 # Создайте программу для игры в ""Крестики-нолики"".
 
+
 from random import randint
 
 def create_arr(size, sign):
