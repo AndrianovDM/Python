@@ -26,25 +26,39 @@
 # Задача №30
 # Пам-парам парам -пам - пам
 
-words = ['а', 'о', 'э', 'е', 'и', 'ы', 'у', 'ё', 'ю', 'я']
-phrase = list(map(str, input('Введите стихотворение').split()))
-sum = []
-for i in phrase:
-    count = 0
-    for j in i:
-        if j in words:
-            count += 1
-        else:
-            count
-    sum.append(count)
+# words = ['а', 'о', 'э', 'е', 'и', 'ы', 'у', 'ё', 'ю', 'я']
+# phrase = list(map(str, input('Введите стихотворение').split()))
+# sum = []
+# for i in phrase:
+#     count = 0
+#     for j in i:
+#         if j in words:
+#             count += 1
+#         else:
+#             count
+#     sum.append(count)
 
-if len(set(sum)) == 1:
-    print('Парам пам-пам')
+# if len(set(sum)) == 1:
+#     print('Парам пам-пам')
+# else:
+#     print('Пам парам')
+#     print(count)
+
+
+# Задача №31
+# все равны как на подбор
+
+def same_by(characteristic, objects):
+    if not objects:
+        return True
+    else:
+        return len(set([characteristic(i) for i in objects])) == 1
+
+values = [0, 2, 10, 6]
+if same_by(lambda x: x % 2, values):
+    print('same')
 else:
-    print('Пам парам')
-    print(count)
-
-
+    print('different')
 
 
 
