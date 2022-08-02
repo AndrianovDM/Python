@@ -62,13 +62,13 @@
 
 # Задача №32
 # Построить таблицу умножения
-def print_operation_table(operation, num_rows = 9, num_columns = 9):
-    arr = [[ operation(i, j) for i in range(1, num_columns+1)] for j in range(1, num_rows +1)]
-    for i in arr:
-        for j in i:
-            print((str(j).center(5)), end = " ")
-        print()
+# def print_operation_table(operation, num_rows = 9, num_columns = 9):
+#     arr = [[ operation(i, j) for i in range(1, num_columns+1)] for j in range(1, num_rows +1)]
+#     for i in arr:
+#         for j in i:
+#             print((str(j).center(5)), end = " ")
+#         print()
 
-print_operation_table(lambda x, y: x * y, 9, 9)
+# print_operation_table(lambda x, y: x * y, 9, 9)
 
 
