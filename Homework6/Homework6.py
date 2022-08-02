@@ -48,18 +48,27 @@
 # Задача №31
 # все равны как на подбор
 
-def same_by(characteristic, objects):
-    if not objects:
-        return True
-    else:
-        return len(set([characteristic(i) for i in objects])) == 1
+# def same_by(characteristic, objects):
+#     if not objects:
+#         return True
+#     else:
+#         return len(set([characteristic(i) for i in objects])) == 1
 
-values = [0, 2, 10, 6]
-if same_by(lambda x: x % 2, values):
-    print('same')
-else:
-    print('different')
+# values = [0, 2, 10, 6]
+# if same_by(lambda x: x % 2, values):
+#     print('same')
+# else:
+#     print('different')
 
+# Задача №32
+# Построить таблицу умножения
+def print_operation_table(operation, num_rows = 9, num_columns = 9):
+    arr = [[ operation(i, j) for i in range(1, num_columns+1)] for j in range(1, num_rows +1)]
+    for i in arr:
+        for j in i:
+            print((str(j).center(5)), end = " ")
+        print()
 
+print_operation_table(lambda x, y: x * y, 9, 9)
 
 
