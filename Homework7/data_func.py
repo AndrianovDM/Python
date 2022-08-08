@@ -74,10 +74,3 @@ def export_import(method):
                 with open('data_one_import.txt','a', encoding = 'utf-8') as file:
                     file.write('{}'.format(j))
 
-# def save_data():
-#     pass
-# print(сreate_data())
-
-# srr = [1,2,3,4,5,6,7,8,9]
-# srr.pop(0)
-# print(srr)
