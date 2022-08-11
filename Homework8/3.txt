@@ -1,0 +1,6 @@
+id;par_id;place;medical_policy
+1;1;work;23465
+2;2;work;45232
+3;1;jobless;32211
+4;2;jobless;42123
+
